@@ -1,8 +1,8 @@
 {
   "name": "gitdiffer",
   "displayName": "gitDiffer",
-  "description": "Just lunch git difftools",
-  "version": "0.0.1",
+  "description": "Just launch git difftools & Mergetool for resolve merge conflict",
+  "version": "0.0.2",
   "publisher": "aaghabeiki",
   "engines": {
     "vscode": "^1.11.0"
@@ -11,22 +11,28 @@
     "Other"
   ],
   "activationEvents": [
-    "onCommand:extension.gitDiffer"
+    "onCommand:extension.gitDiffer",
+    "onCommand:extention.gitMergetool"
   ],
   "main": "./extension",
   "contributes": {
-    "commands": [
-      {
+    "commands": [{
         "command": "extension.gitDiffer",
-        "title": "lunch difftools on this file..."
+        "title": "Launch Difftool for ..."
+      },
+      {
+        "command": "extention.gitMergetool",
+        "title": "Launch Mergetool"
       }
     ],
     "menus": {
-      "scm/resourceState/context": [
-        {
-          "command": "extension.gitDiffer"
-        }
-      ]
+      "scm/resourceState/context": [{
+        "command": "extension.gitDiffer"
+      }],
+      "scm/title": [{
+          "command":"extention.gitMergetool"
+          
+        }]
     }
   },
   "scripts": {

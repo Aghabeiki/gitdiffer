@@ -36,6 +36,26 @@ function activate(context) {
         }
 
     });
+    var gitMergetool= vscode.commands.registerCommand('extention.gitMergetool',function(){
+            var simpleGit = require('simple-git');
+            var projectPath = (vscode.workspace.rootPath)
+             simpleGit(projectPath).raw(
+                [
+                    'mergetool'                
+                ], (err, result) => {
+                    if(err)
+                        vscode.window.showWarningMessage(err)
+                    if(result.replace("\n","")=='No files need merging')
+                        vscode.window.showInformationMessage("No files need merging");
+
+
+
+                    console.log(result);
+                   
+
+                });
+    });
+    context.subscriptions.push(gitMergetool);
     context.subscriptions.push(gitDiffer);
 
 }
@@ -45,3 +65,5 @@ exports.activate = activate;
 // this method is called when your extension is deactivated
 function deactivate() {}
 exports.deactivate = deactivate;
+
+
