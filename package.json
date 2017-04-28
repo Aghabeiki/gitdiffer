@@ -1,8 +1,8 @@
 {
   "name": "gitdiffer",
-  "displayName": "gitDiffer",
+  "displayName": "GitDiffer",
   "description": "Just launch git difftools & Mergetool for resolve merge conflict",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "publisher": "aaghabeiki",
   "engines": {
     "vscode": "^1.11.0"
@@ -16,7 +16,8 @@
   ],
   "main": "./extension",
   "contributes": {
-    "commands": [{
+    "commands": [
+      {
         "command": "extension.gitDiffer",
         "title": "Launch Difftool for ..."
       },
@@ -26,13 +27,16 @@
       }
     ],
     "menus": {
-      "scm/resourceState/context": [{
-        "command": "extension.gitDiffer"
-      }],
-      "scm/title": [{
-          "command":"extention.gitMergetool"
-          
-        }]
+      "scm/resourceState/context": [
+        {
+          "command": "extension.gitDiffer"
+        }
+      ],
+      "scm/title": [
+        {
+          "command": "extention.gitMergetool"
+        }
+      ]
     }
   },
   "scripts": {
@@ -49,5 +53,24 @@
   },
   "dependencies": {
     "simple-git": "^1.70.0"
-  }
+  },
+  "homepage": "https://github.com/RaianRaika/gitdiffer",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RaianRaika/gitdiffer.git"
+  },
+  "bugs": {
+    "url": "https://github.com/RaianRaika/gitdiffer/issues"
+  },
+  "license": "MIT",
+  "keywords": [
+    "git",
+    "vscode",
+    "mergetools",
+    "difftools",
+    "merge conflict",
+    "conflict",
+    "extensions"
+  ],
+  "author": "A.Aghabeiki"
 }

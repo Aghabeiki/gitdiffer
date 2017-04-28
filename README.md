@@ -27,4 +27,5 @@ Visual Studio Code extension for running git difftool and git mergetools to reso
 * This extention should work with other [diffmerge](https://sourcegear.com/diffmerge/) tools.
 * git configurations depends on the used tools. 
 
+[Bug Reports](https://github.com/RaianRaika/gitdiffer/issues)<br>
 [Repo](https://github.com/RaianRaika/gitdiffer)
